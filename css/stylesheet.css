@@ -1,4 +1,10 @@
 * {
     border: 0;
     margin: 0;
+    font-size: 15px;
+    font-family: comic sans-serif;
+}
+
+#logoimg{
+    width: 3rem;
 }
