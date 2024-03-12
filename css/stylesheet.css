@@ -3,6 +3,10 @@
     margin: 0;
     font-size: 30px;
     font-family: comic sans-serif;
+    color: white;
+}
+body{
+    background: linear-gradient(90deg, rgba(19,255,7,1) 0%, rgba(0,47,177,1) 30%, rgba(223,12,1,1) 58%, rgba(238,253,12,1) 78%, rgba(119,6,220,1) 100%);
 }
 
 /* Remove the navbar's default margin-bottom and rounded borders */
@@ -62,6 +66,21 @@ h1{
 #illuminati{
     float: right;
     width: 50%;
+}
+#illuminatidiv{
+    display: flex;
+}
+.socials{
+    display: flex;
+}
+.socialicons {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.icon{
+    width: 8rem;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
