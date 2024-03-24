@@ -1,0 +1,74 @@
+const mlgAudio = document.getElementById("mlg-audio");
+const mlgText = document.getElementsByClassName("mlg")[0];
+const images = document.querySelector('.images');
+const leftImage = document.querySelector('.left-image');
+const rightImage = document.querySelector('.right-image');
+const musicButtons = document.querySelectorAll('.music-button');
+const music1 = new Audio('/sounds/Soundbar1.mp3');
+const music2 = new Audio('/sounds/Soundbar2.mp3');
+const musicImages = document.querySelectorAll('.music-button');
+let timerId;
+music1.volume = 0.3;
+music2.volume = 0.3;
+mlgAudio.volume = 0.3; 
+
+
+mlgText.addEventListener("click", function() {
+    mlgAudio.currentTime = 0;
+    mlgText.classList.add('rotate-infinite');
+    mlgAudio.play();
+    showImages();
+
+    if (timerId) {
+        clearTimeout(timerId);
+    }
+
+    timerId = setTimeout(function() {
+        mlgAudio.pause();
+        hideImages();
+        mlgText.classList.remove('rotate-infinite');
+      }, 5000);
+  });
+  
+document.addEventListener("click", function(event) {
+    if (!mlgText.contains(event.target)) {
+      mlgAudio.pause();
+      hideImages();
+      mlgText.classList.remove('rotate-infinite');
+      if (timerId) {
+        clearTimeout(timerId);
+        timerId = null;
+        }  
+    }
+  });
+
+  function showImages() {
+    images.classList.remove('hidden');
+    leftImage.classList.add('animated');
+    rightImage.classList.add('animated');
+
+  }
+  
+  function hideImages() {
+    images.classList.add('hidden');
+    leftImage.classList.remove('animated');
+    rightImage.classList.remove('animated');
+    
+  }
+  
+
+  function startMusic1() {
+    music1.currentTime = 0;
+    music1.play();
+  }
+  
+  function startMusic2() {
+    music2.currentTime = 0;
+    music2.play();
+  }
+  
+  // Добавляем обработчик события на каждую картинку
+  musicImages.forEach(image => {
+    image.addEventListener('mouseover', showImages);
+    image.addEventListener('mouseout', hideImages);
+  });

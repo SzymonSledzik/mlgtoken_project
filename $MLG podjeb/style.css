@@ -1,0 +1,591 @@
+*{
+  font-size: 14px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+@font-face {
+    font-family: 'SuperMario';
+    src: url('/fonts/SuperMario256.ttf');
+  }
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background-color: #212121;
+    font-family: 'SuperMario';
+}
+
+.container {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+  }
+
+  header {
+    background-color: #333;
+    color: white;
+    padding: 3.571rem;
+  }
+  .logo{
+    height: 9.286rem;
+    width: 9.286rem;
+    position: absolute;
+    top: 0.5rem;
+  }
+
+  .twi{
+    height: 7.143rem;
+    width: 8.714rem;
+    position: absolute;
+    top: 1.357rem;
+    right: 1.429rem;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin-right: 7.143rem;
+    width: auto;
+  }
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5em;
+    transition: color 0.2s;
+  }
+  
+  
+  nav a:hover {
+    color: yellow;
+  }
+  
+
+
+
+
+  /* .marquee {
+    overflow: hidden;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+
+  }
+  .marquee p {
+    display: inline-block;
+    margin: 0;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  } */
+  
+
+h1 {
+	font-size: 4rem;
+	margin-bottom: 1rem;
+}
+
+
+.mlg {
+    font-size: 10rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: blink 1s infinite;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.rotate-infinite {
+    animation: mlg-effect 1s linear infinite;
+  }
+
+.mlg span {
+    display: inline-block;
+    border: 0.2rem solid transparent;
+}
+
+.images {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+    /* position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); */
+
+  }
+  .left-image,
+.right-image {
+  max-width: 50%;
+  height: auto;
+}
+  .hidden {
+    display: none;
+  }
+  /* .left-image {
+    position: absolute;
+    left: -100px;
+    top: -200px;
+  }
+  
+  .right-image {
+    position: absolute;
+    right: -1900px;
+    top: -200px;
+
+  } */
+
+
+
+
+
+
+
+
+
+.runnercont{
+    position: relative;
+    margin: 7.786rem 0;
+    height: 28.571rem;
+    /* margin-bottom: 300px; */
+    overflow: hidden;
+}
+.runner {
+    width: 21.42rem;
+    height: 21.42rem;
+    position: absolute;
+    transform: translateY(-50%);
+    left: -7.14rem;
+    animation: run 3.5s linear infinite;
+  }
+  
+  @keyframes run {
+    0% {
+        transform: translate(0, 0) rotate(0);
+        left: -100px;
+      }
+      25% {
+        transform: translate(0, -15px) rotate(-15deg);
+      }
+      50% {
+        transform: translate(0, 0) rotate(0);
+      }
+      75% {
+        transform: translate(0, 15px) rotate(15deg);
+      }
+      100% {
+        transform: translate(100%, 0) rotate(0);
+        left: 100%;
+      }
+  }
+
+
+  .videoeo video{
+    margin: 4rem;
+    border-radius: 20px;
+    width: 50rem;
+  }
+  .videoeo p{
+    margin: 2rem;
+  }
+
+  .tokenomics {
+	  background-color: #212121;
+    color: #fff;
+    padding: 0px 5rem 5rem 5rem;
+    text-align: center;
+  }
+
+  .tokenomics h2 {
+    font-size: 6.143rem;
+    padding: 6.429rem;
+
+  }
+  
+
+  
+  .info {
+    margin: auto;
+    margin-bottom: 14.286rem;
+    width: 82.143rem;
+    border: 2px solid black;
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ff00, 0 0 40px #ffff00, 0 0 50px #00ffff, 0 0 60px #ff0000;
+    animation: animate-border 2s linear infinite;
+    border-radius: 20px;
+    text-align: center;
+
+  }
+  .info-title{
+    font-size: 2.857rem;
+  }
+  .info-info{
+    font-size: 1.786rem;
+    display: flex;
+    justify-content: space-between;
+
+    columns: 2;
+    column-gap: 1.429rem;
+  }
+  .info-margin{
+    margin:2.143rem 0.786rem ;
+    margin-bottom: 1.429rem;
+    word-wrap: break-word;
+    text-align: left;
+    flex-basis: 48%;
+    line-height: 1.5;
+
+
+    
+
+  }
+
+  .music-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -42.857rem -2.143rem 0;
+  }
+  
+  .music-button {
+    width: 14.286rem;
+    height: 14.286rem;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.143rem;
+    font-weight: bold;
+    padding: 0.714rem;
+    transition: background-color 0.3s ease;
+    animation-name: shakeInfo;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shakeInfo {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* .music-button:nth-of-type(2) {
+    animation-delay: 2s;
+  }
+  
+  .music-button:nth-of-type(3) {
+    animation-delay: 4s;
+  } */
+  .music-button:hover {
+    color: #fff;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .warning {
+    margin-top: 3.571rem;
+    animation: shake  0.5s linear infinite;
+
+  }
+
+  .runnercontcat{
+    position: relative;
+    padding: 14.929rem;
+    /* height: 400px; */
+    overflow: hidden;
+    margin-top: 14.286rem;
+
+}
+.runnercat {
+    height: 21.429rem;
+    position: absolute;
+    transform: translateY(-50%);
+    right: -142.86rem;
+    animation: runcat 4s linear infinite;
+  }
+  
+  @keyframes runcat {
+    0% {
+        right: -142.857rem;
+      }
+      100% {
+        right: 100%;
+      }
+  }
+
+
+
+  .roadmap {
+    display: grid;
+    grid-gap: 3.571rem;
+    align-items: center;
+    color: white;
+    padding-top: 7.143rem;
+    padding-bottom: 7.143rem;
+
+  }
+  
+  .roadmap-title {
+    text-align: center;
+    font-size: 86px;
+  }
+  
+  .roadmap-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 6.143rem;
+    align-items: center;
+  }
+  
+  .roadmap-image {
+    width: 42.857rem;
+    margin: auto;
+  }
+  
+  .roadmap-list {
+    border: 2px solid black;
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ff00, 0 0 40px #ffff00, 0 0 50px #00ffff, 0 0 60px #ff0000;
+    animation: animate-border 2s linear infinite;
+    border-radius: 20px;
+    text-align: left;
+    font-size: 1.786rem;
+    margin:0 3.571rem;
+  }
+  
+  .roadmap-list ul {
+    list-style: none;
+    padding: 0 0.714rem;
+    columns: 2;
+    column-gap: 1.429re,;
+    line-height: 1.25;
+
+  }
+  
+  .roadmap-list li {
+    margin: 0px 2.143rem 2.857rem;
+  }
+  .roadmap-list h3{
+    margin:0;
+  }
+  .roadmap-list p{
+    font-size: 1.429rem;
+  }
+
+  ul.phases li:not(:last-child)::before {
+    content: '';
+    display: block;
+    height: 0.143rem;
+    width: calc(100% + 2.857rem);
+    background-color: #ccc;
+    position: absolute;
+    bottom: calc(100% + 1.429rem);
+    left: -1.429rem;
+  }
+  .roadmap-listimg{
+    height: 17.857rem;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .copy {
+    margin: 0.5rem 0;
+    font-size: 1.071rem;
+  }
+
+
+
+
+
+  @keyframes animate-border {
+    0% {
+      box-shadow:  0 0 20px #ff0000, 0 0 30px #ff00ff, 0 0 40px #00ff00, 0 0 50px #ffff00, 0 0 60px #00ffff;
+    }
+    25% {
+        box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ff00, 0 0 40px #ffff00, 0 0 50px #00ffff, 0 0 60px #ff0000;
+      }
+    50% {
+        box-shadow:  0 0 20px #ff0000, 0 0 30px #ff00ff, 0 0 40px #00ff00, 0 0 50px #ffff00, 0 0 60px #00ffff;
+      }
+    75% {
+        box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ff00, 0 0 40px #ffff00, 0 0 50px #00ffff, 0 0 60px #ff0000;
+      }
+    100% {
+      box-shadow: 0 0 20px #ff0000, 0 0 30px #ff00ff, 0 0 40px #00ff00, 0 0 50px #ffff00, 0 0 60px #00ffff;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+      color: #ff0000;
+      text-shadow: 0 0 1px #0048ac;
+    }
+    25% {
+      transform: translateX(-5px) rotate(5deg);
+      color: #ff0000;
+      text-shadow: 0 0 1px #0048ac;
+    }
+    50% {
+      transform: translateX(0) rotate(-5deg);
+      color: #00ff00;
+        text-shadow: 0 0 1px #ff0000;
+    }
+    75% {
+      transform: translateX(5px) rotate(5deg);
+      color: #ff0000;
+      text-shadow: 0 0 1px #00e14b;
+    }
+    100% {
+      transform: translateX(0) rotate(0);
+      color: #ff0000;
+      text-shadow: 0 0 1px #00e14b;
+    }
+  }
+  
+  .warning h3 {
+    font-size: 3.571rem;
+    margin-bottom: 0.714rem;
+    text-transform: uppercase;
+    letter-spacing: 0.143rem;
+  }
+  
+  
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+@keyframes blink {
+    0% {
+        color: #ff0000;
+        text-shadow: 0 0 10px #0048ac;
+    }
+    25% {
+        color: yellow;
+      }
+    50% {
+        color: #00ff00;
+        text-shadow: 0 0 10px #ff0000;
+    }
+    75% {
+        color: yellow;
+      }
+    100% {
+        color: #ff0000;
+        text-shadow: 0 0 10px #00e14b;
+    }
+}
+
+@keyframes mlg-effect {
+  0% {
+    color: #ff0000;
+    text-shadow: 0 0 10px #0048ac;
+    transform: scale(1) ;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: #00ff00;
+    text-shadow: 0 0 10px #ff0000;
+    transform: scale(1.2) ;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: #ff0000;
+    text-shadow: 0 0 10px #00e14b;
+    transform: scale(1) ;
+  }
+}
+
+@keyframes shakeImage {
+  0% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+}
+
+.left-image.animated {
+  animation: shakeImage 0.3s ease-in-out infinite;
+}
+
+.right-image.animated {
+  animation: shakeImage 0.3s ease-in-out infinite;
+}
+
+@media screen and (max-width: 767px) {
+  * {
+      font-size: 6px;
+  }
+  .roadmap-image {
+    width: 12.857rem;
+  }
+  .twi{
+    height: 6rem;
+    width: 6rem;
+  }
+  .logo{
+    height: 6rem;
+    width: 6rem;
+  }
+  .videoeo video{
+    margin: 4rem;
+    border-radius: 10px;
+    width: 30rem;
+  }
+  .runner {
+    width: 21.42rem;
+    height: 21.42rem;
+  }
+  nav li {
+    margin-right: 2rem;
+    width: auto;
+  }
+}
