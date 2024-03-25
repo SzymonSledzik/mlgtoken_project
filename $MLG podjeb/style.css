@@ -263,10 +263,6 @@ h1 {
     text-align: left;
     flex-basis: 48%;
     line-height: 1.5;
-
-
-    
-
   }
 
   .music-buttons {
@@ -565,20 +561,23 @@ h1 {
       font-size: 6px;
   }
   .roadmap-image {
-    width: 12.857rem;
+    width: 20rem;
   }
   .twi{
-    height: 6rem;
-    width: 6rem;
+    height: 8rem;
+    width: 8rem;
   }
   .logo{
-    height: 6rem;
-    width: 6rem;
+    height: 8rem;
+    width: 8rem;
   }
   .videoeo video{
     margin: 4rem;
     border-radius: 10px;
     width: 30rem;
+  }
+  .videoeo p{
+    font-size: 2rem;
   }
   .runner {
     width: 21.42rem;
@@ -587,5 +586,51 @@ h1 {
   nav li {
     margin-right: 2rem;
     width: auto;
+  }
+  .tokenomics {
+    padding: 0px 2rem 2rem 2rem;
+  }
+  .info {
+    margin-bottom: 14.286rem;
+    width: 65%;
+  }
+    .info-info{
+    font-size: 3.786rem;
+    display: flex;
+    justify-content: space-between;
+
+    columns: 2;
+    column-gap: 0.429rem;
+  }
+  .info-margin{
+    margin: 1.75rem;
+    word-wrap: break-word;
+    text-align: left;
+    flex-basis: 48%;
+    line-height: 1.5;
+    font-size: 1.75rem;
+  }
+
+  .roadmap-list p{
+    font-size: 1.5rem;
+  }
+  .roadmap-list h3{
+    font-size: 1.7rem;
+  }
+  
+  .roadmap-list {
+    border: 1.5px solid black;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ff00, 0 0 40px #ffff00, 0 0 50px #00ffff, 0 0 60px #ff0000;
+    animation: animate-border 2s linear infinite;
+    border-radius: 20px;
+    text-align: left;
+    font-size: 1.786rem;
+    margin:0 0.5rem;
+  }
+  .roadmap-list li {
+    margin: 0px 0.5rem 0.5rem;
+  }
+  #monke{
+    width: 12rem;
   }
 }
